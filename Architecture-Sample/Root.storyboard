@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2PM-0d-d0i">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="ixb-kT-5gu">
+            <objects>
+                <viewController id="2PM-0d-d0i" customClass="RootViewController" customModule="Architecture_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hCD-D4-RoL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="68C-9m-MIh">
+                                <rect key="frame" x="103.5" y="368.5" width="207" height="159"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69q-YI-vAv">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="B0U-l9-C02"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="MVC"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQY-cB-jj9">
+                                        <rect key="frame" x="0.0" y="109" width="207" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="We5-JO-2Ep"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="MVP"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="akE-R8-7Kp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="68C-9m-MIh" firstAttribute="centerX" secondItem="hCD-D4-RoL" secondAttribute="centerX" id="DAG-xs-ysu"/>
+                            <constraint firstItem="MQY-cB-jj9" firstAttribute="width" secondItem="hCD-D4-RoL" secondAttribute="width" multiplier="0.5" id="bOt-1u-Tf2"/>
+                            <constraint firstItem="68C-9m-MIh" firstAttribute="centerY" secondItem="hCD-D4-RoL" secondAttribute="centerY" id="qsF-qe-6Ow"/>
+                            <constraint firstItem="69q-YI-vAv" firstAttribute="width" secondItem="hCD-D4-RoL" secondAttribute="width" multiplier="0.5" id="wBE-0S-oVw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mvcButton" destination="69q-YI-vAv" id="iBQ-jF-LSG"/>
+                        <outlet property="mvpButton" destination="MQY-cB-jj9" id="mh7-q8-U65"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1r4-Gg-f8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="41"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

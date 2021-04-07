@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R7U-eb-gfP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="6Jl-kA-3kg">
+            <objects>
+                <viewController id="R7U-eb-gfP" customClass="MVPSearchViewController" customModule="Architecture_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fHV-ag-z4h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fvD-if-FTf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="R7U-eb-gfP" id="cOQ-gs-oak"/>
+                                    <outlet property="delegate" destination="R7U-eb-gfP" id="9Nd-FZ-7Dw"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SN3-bj-CtV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xN1-2R-Ue2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xN1-2R-Ue2" firstAttribute="trailing" secondItem="fvD-if-FTf" secondAttribute="trailing" id="9D9-aO-feF"/>
+                            <constraint firstItem="xN1-2R-Ue2" firstAttribute="bottom" secondItem="fvD-if-FTf" secondAttribute="bottom" id="EiN-mj-y5P"/>
+                            <constraint firstItem="SN3-bj-CtV" firstAttribute="leading" secondItem="xN1-2R-Ue2" secondAttribute="leading" id="MZI-AG-Y86"/>
+                            <constraint firstItem="fvD-if-FTf" firstAttribute="leading" secondItem="xN1-2R-Ue2" secondAttribute="leading" id="heW-qW-bwN"/>
+                            <constraint firstItem="SN3-bj-CtV" firstAttribute="top" secondItem="xN1-2R-Ue2" secondAttribute="top" id="nGV-ex-dTd"/>
+                            <constraint firstItem="SN3-bj-CtV" firstAttribute="bottom" secondItem="xN1-2R-Ue2" secondAttribute="bottom" id="sA3-P4-IPd"/>
+                            <constraint firstItem="fvD-if-FTf" firstAttribute="top" secondItem="xN1-2R-Ue2" secondAttribute="top" id="sRX-zN-DVU"/>
+                            <constraint firstItem="xN1-2R-Ue2" firstAttribute="trailing" secondItem="SN3-bj-CtV" secondAttribute="trailing" id="wX1-HS-yiE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="SN3-bj-CtV" id="Dn6-Hi-4cm"/>
+                        <outlet property="tableView" destination="fvD-if-FTf" id="L9o-xz-t72"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47V-7K-71R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-375.36231884057975" y="-13.392857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
